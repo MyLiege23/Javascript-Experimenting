@@ -1,5 +1,3 @@
-
-
 let add7 = (n) => n + 7;
 
 let multiply = (x, y) => x * y;
@@ -10,7 +8,7 @@ function capitalize(str) {
   //return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-let lastLetter =  (str) => str[str.length - 1];
+let lastLetter = (str) => str[str.length - 1];
 
 // Setup
 const contacts = [
@@ -51,10 +49,9 @@ function lookUpProfile(name, prop) {
       }
     }
   }
-  return "No such contact"
+  return "No such contact";
   // Only change code above this line
 }
-
 
 function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
@@ -62,7 +59,7 @@ function fizzBuzz(n) {
       if (i % 5 === 0) {
         console.log("fizzBuzz");
       } else {
-      console.log("fizz");
+        console.log("fizz");
       }
     } else if (i % 5 === 0) {
       console.log("buzz");
@@ -74,24 +71,29 @@ function fizzBuzz(n) {
 
 function fizzBuzz2() {
   let output = [];
-  let player = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
-  for (let x = 1; x <= player; x++){
-    switch(true) {
-      case (x % 5 == 0 && x % 3 == 0): output.push("fizzBuzz");
-      break;
-      case (x % 3 == 0): output.push("fizz");
-      break;
-      case (x % 5 == 0): output.push("buzz");
-      break;
-      default: output.push(x);
-      break;
+  let player = parseInt(
+    prompt("Please enter the number you would like to FizzBuzz up to: ")
+  );
+  for (let x = 1; x <= player; x++) {
+    switch (true) {
+      case x % 5 == 0 && x % 3 == 0:
+        output.push("fizzBuzz");
+        break;
+      case x % 3 == 0:
+        output.push("fizz");
+        break;
+      case x % 5 == 0:
+        output.push("buzz");
+        break;
+      default:
+        output.push(x);
+        break;
     }
   }
   return output;
 }
 
 //Rock Paper Scizzors exercise!
-
 
 /*
 function playRPS () {
@@ -162,7 +164,7 @@ function getPlayerChoice() {
   return prompt("Rock, paper, or scissors?").toLowerCase();
 }
 
-function rpsWhoWon (computerChoice, playerChoice) {
+function rpsWhoWon(computerChoice, playerChoice) {
   if (computerChoice === playerChoice) {
     return 0;
   } else if (computerChoice === "rock") {
@@ -189,13 +191,13 @@ function rpsWhoWon (computerChoice, playerChoice) {
 function playRPSOutOf(n) {
   let computerScore = 0;
   let playerScore = 0;
-  while ((computerScore + playerScore) < n) {
+  while (computerScore + playerScore < n) {
     let playerChoice = getPlayerChoice();
     let computerChoice = getComputerChoice();
-    console.log("Player: " + playerChoice)
-    console.log("Computer: " + computerChoice)
+    console.log("Player: " + playerChoice);
+    console.log("Computer: " + computerChoice);
     let outcome = rpsWhoWon(computerChoice, playerChoice);
-    switch(outcome) {
+    switch (outcome) {
       case -1:
         console.log("Computer won!");
         computerScore++;
@@ -205,12 +207,12 @@ function playRPSOutOf(n) {
         playerScore++;
         break;
       default:
-        console.log("Tie!")
+        console.log("Tie!");
         break;
     }
   }
-  let gameScore = "Player Score: " + playerScore + " \nComputer Score: " + computerScore;
+  let gameScore =
+    "Player Score: " + playerScore + " \nComputer Score: " + computerScore;
   console.log(gameScore);
   return gameScore;
 }
-
